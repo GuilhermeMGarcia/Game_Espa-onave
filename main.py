@@ -1,6 +1,5 @@
 import sys
 import pygame
-
 # Inicaliza o jogo e cria um objeto para a tela.
 
 
@@ -8,7 +7,10 @@ def run_game():
     pygame.init()
     screen = pygame.display.set_mode(1200, 800)
     pygame.display.set_caption("Alien Invasion")
+# Cor de fundo.
 
+
+bg_color = (230, 230, 230)
 # Iniciar o laço principal do jogo.
 
 
