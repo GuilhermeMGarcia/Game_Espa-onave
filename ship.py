@@ -12,9 +12,16 @@ class Ship():
         self.rect = self.image.get_rect()
         self.screen_rect = screen.get_rect()
 
-        #Inicia cada nova espaçonave na parte inferior central da tela
+        #Inicia cada novo pinto loko na parte inferior central da tela
         self.rect.centerx = self.screen_rect.centerx
         self.rect.bottom = self.screen_rect.bottom
+        #Flag de movimento
+        self.moving_right = False
+
+    def update(self):
+        """Atualiza a posição do pinto loko de acordo com a flag de movimento"""
+        if self.moving_right:
+            self.rect.centerx += 1
 
     def blitme(self):
         """Desenha a espaçonave em sua posição atual."""
